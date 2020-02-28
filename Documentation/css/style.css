@@ -1,0 +1,55 @@
+/* =================================================
+
+Template Name:  Personal Portfolio HTML Template
+Author: Chris Owusu
+Version: 1.0
+Design and Developed by: Themster Theme
+
+NB: This file contains the styling for the actual theme, this is the file you need to edit to change the look of the theme.
+
+=================================================== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+/*- Navbar -*/
+nav.navbar {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: fixed;
+  width: 200px;
+  overflow: hidden;
+}
+nav.navbar .navbar-nav {
+  display: block;
+}
+.nav {
+  margin-left: 200px;
+  height: 1000px;
+  width: auto;
+}
+nav.navbar .nav-item a {
+  color: #fff !important;
+  font-weight: 600;
+}
+nav.navbar .nav-item .nav-link.active {
+  color: #444 !important;
+}
+/*- End Navbar -*/
+section#Home .header {
+    border-bottom: 1px solid royalblue;
+}
+pre{
+    border: 1px solid royalblue;
+    padding: 10px;
+    background-color: rosybrown;
+    color: #fff;
+}
+section#Home #img1 {
+  width: 600px;
+  height: 350px;
+}

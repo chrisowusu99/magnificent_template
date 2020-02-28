@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Boostraps.css cdn file-->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- font-awesome.css cdn file-->
+  <link rel="stylesheet" href="css/font-awesome.css" />
+  <!-- style.css cdn file-->
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Documentation</title>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <!--- Navigation --->
+  <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+    <div class="container">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home">Start</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#getting">Geting Started</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#file">File Structure</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#used">Used Library</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Home">Home Page Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Page Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#service">Services Page Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio Page Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact Page Customization</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#thanks">Thank you</a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+  <!--End Nav --->
+
+  <div class="nav">
+    <!--start home section -->
+    <section id="home">
+      <div class="container-fluid">
+        <h3 class="heading">First of all Thank You for perchasing my template I am very glad.</h3>
+        <p>My name is Christian Owusu and this is my email <a href="" target="_blank">christianowusu44@gmail.com</a>
+          if you want another template for yourself or any assistans. Thank you</p>
+        <h5>In this is installation I am going help you on how I created this template from start to finish but
+          am
+          only covering the complicated part and also
+          help to delopy the website with a video made by Brad Travery. So lets get Started</h5>
+      </div>
+    </section>
+    <!--End Home Section-->
+
+    <!--- Start Home Installation section ---->
+    <section id="getting">
+      <div class="container">
+        <ol>
+          <li>Download the template and extract the zip with either windows pre-installad extractor or you can
+            install your own extracting tool.</li>
+          <li>Then get a text editor, either <a href="https://code.visualstudio.com
+            " target="_blank">VScode</a>,<a href="https://atom.io" target="_blank">Atom</a>,<a href="https://www.sublimetext.com
+            " target="_blank">Sublime
+              text</a>. Any of this will work fine</li>
+          <li>After this open the template in the editor, thern launch liveserver on from vscode or browser sync for sublime text, with that done lets edit....</li>
+          <p>These are the stylesheet links your can use and there all in the folder</p>
+        </ol>
+      </div>
+    </section>
+    <section id="file">
+      <div class="container">
+        <ol>
+          <pre>
+  &lt;!--- Bootstraps.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/bootstrap.min.css"&gt;
+  &lt;!--- font-awesome.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/font-awesome.css"&gt;
+  &lt;!--- jquery.rprogessbar.min.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/jquery.rprogessbar.min.css"&gt;
+  &lt;!--- owl.carousel.min.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/owl.carousel.min.css"&gt;
+  &lt;!--- owl.theme.default.min.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/owl.theme.default.min.css"&gt;
+  &lt;!--- animate.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/animate.css"&gt;
+  &lt;!--- stylesheet.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/stylesheet.css"&gt;
+  &lt;!--- responsive.css cdn--&gt;
+  &lt;link rel="stylesheet" href="css/responsive.css"&gt;
+                </pre>
+          <p>The responsive.css file lets you edit the reponsiveness and the stylesheet lets you edit the work
+            it
+            self</p>
+        </ol>
+      </div>
+    </section>
+    <section id="used">
+      <div class="container">
+        <ol>
+          <p>In this section I will show you how I did some part and also discus the libraries used</p>
+          <li>This is the preloader sectiion code</li>
+          <pre>
+                    &lt;div class="loader_bg"&gt;
+                        &lt;div class="loader"&gt;&lt;/div&gt;
+                      &lt;/div&gt;
+                </pre>
+          <li>This is the html code.It's just two divs where one i sthe container and one is the styled thats
+            what
+            make the round shape</li>
+          <pre>
+                    .loader_bg {
+                        position: fixed;
+                        z-index: 9999999;
+                        background: #fff;
+                        width: 100%;
+                        height: 100%;
+                      }
+                      /*-This is used to style the postion and the z-index brings the loader closer to you--*/
+                      
+                      .loader {
+                        border: 0 solid transparent;
+                        border-radius: 50%;
+                        width: 150px;
+                        height: 150px;
+                        position: absolute;
+                        top: calc(50vh - 75px);
+                        left: calc(50vw - 75px);
+                      }
+                      /*-This center the loader-*/
+                      
+                      .loader:before, .loader:after {
+                        content: '';
+                        border: 1em solid #0076ff;
+                        border-radius: 50%;
+                        width: inherit;
+                        height: inherit;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        animation: loader 2s linear infinite;
+                        opacity: 0;
+                      }
+                      /*-This styles the color and raduis which turns into a circle-*/
+                      
+                      .loader:before {
+                        animation-delay: .5s;
+                      }
+                      
+                      @keyframes loader {
+                        0% {
+                            transform: scale(0);
+                            opacity: 0; }
+                        50% {
+                            opacity: 1; }
+                        100% {
+                            transform: scale(1);
+                            opacity: 0; }
+                      }
+                      /*-This is the animate styling-*/
+                </pre>
+          <li>But after this the animation will continue untill you it with javascript but in this I will use
+            jQuery</li>
+          <pre>
+                   /*- PreLoader-*/
+setTimeout(function(){
+  $('.loader_bg').fadeToggle();
+}, 2500);
+// This stops the loader with a timer. The timer is 2.5s sincs javascripts calculate time in milliseconds
+                </pre>
+          <li>The next part will be the particle.js part</li>
+          <li>First search for the plugin from github and extract the file.</li>
+          <li>Link the particle.js file in your project but make sure that the plugin comes to the top of the
+            scripts code. I mean the javascript code like this.</li>
+          <pre>
+  &lt;!--- Particle.json file--&gt;
+  &lt;script src="js/particles.json"&gt;&lt;/script&gt;
+  &lt;!--Scripts js file--&gt;
+    &lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+                </pre>
+          <li>And this is the init code</li>
+          <pre>
+    // particle js
+particlesJS.load("particles-js", "js/particles.json", function() {
+  console.log("callback - particles.js config loaded");
+});
+                </pre>
+          <li>The particle.json code can be found in the .json file so please check it out. But everything you
+            need to know can be found in the Documentation at github</li>
+          <pre>
+                    &lt;!--- Start Home Section ----&gt;
+    &lt;div id="particles-js"&gt;&lt;/div&gt;
+    &lt;!-- Start animated typing--&gt;
+    &lt;div class="animate"&gt;
+      &lt;h1 class="text-center"&gt;Welcome and I Am&lt;/h1&gt;
+      &lt;div class="animate-typing" data-animate-loop="true" data-type-speed="100" data-type-delay="200"
+        data-remove-speed="50" data-remove-delay="500" data-cursor-speed="200"&gt;
+        Hacker|               
+        Ux/Ui Designer|<!------ This is text displaying on the home screen ------>
+        Designer|
+      &lt;/div&gt;&lt;!-- End animated typing--&gt;
+    &lt;/div&gt;
+    &lt;div class="btn"&gt;
+      &lt;a href="#contact" class="btn btn-lg btn-primary"&gt;CONTACT ME&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class="circle"&gt;&lt;/div&gt;
+  &lt;!--- End Home Section ----&gt;
+  <!--- You can Leave the configuration but the naming explan themselves so it was eassy to understand it even for the first time. -->
+                </pre>
+          <li>The next will be the liner animated progress bar.</li>
+          <p>This was done with jQuery, which make the work much more easier</p>
+          <p>I will start with the html code</p>
+          <pre>
+                        &lt;h4&gt;My Skills&lt;/h4&gt;
+                        &lt;h6&gt;Web Design&lt;h6&gt;
+                        &lt;div class="html"&gt;&lt;/div&gt;
+                        &lt;h6&gt;Ux/Ui Design&lt;/h6&gt;
+                        &lt;div class="ux"&gt;&lt;/div&gt;
+                        &lt;h6&gt;Game Development&lt;/h6&gt;
+                        &lt;div class="game"&gt;&lt;/div&gt;
+                        &lt;h6&gt;Graphic Design&lt;/h6&gt;
+                        &lt;div class="graphic"&gt;&lt;/div&gt;
+                        <!---- The class are used by jQuery to style and set the function ----->
+                        // animated Progress bar
+$(document).ready(function() {
+  $(".html").rProgressbar({   
+    percentage: 93,
+    fillBackgroundColor: "#0076ff",
+    borderRadius: "0px",                // This styles the html section
+    height: "8px",
+    width: "100%",
+    duration: 3000,
+    ShowProgressCount: true
+  });
+  $(".ux").rProgressbar({
+    percentage: 80,
+    fillBackgroundColor: "#0076ff",
+    borderRadius: "0px",                // This styles the ux section
+    height: "8px",
+    width: "100%",
+    duration: 3000,
+    ShowProgressCount: true
+  });
+  $(".game").rProgressbar({
+    percentage: 65,
+    fillBackgroundColor: "#0076ff",
+    borderRadius: "0px",
+    height: "8px",
+    width: "100%",
+    duration: 3000,
+    ShowProgressCount: true
+  });
+  $(".graphic").rProgressbar({
+    percentage: 55,
+    fillBackgroundColor: "#0076ff",          // This styles the graphic section
+    borderRadius: "0px",
+    height: "8px",
+    width: "100%",
+    duration: 3000,
+    ShowProgressCount: true
+  });
+});
+
+                </pre>
+          <li>The next will the owl.carousel slider</li>
+          <p>This is the html code</p>
+          <li>first link the css file</li>
+          <pre>
+                    &lt;!--- owl.carousel.min.css cdn--&gt;
+          &lt;link rel="stylesheet" href="css/owl.carousel.min.css"&gt;
+          <p>Thern the javascript file</p>
+          <pre>
+              &lt;!--- owl.carousel.min.js js file--&gt;
+        &lt;script src="js/owl.carousel.min.js"&gt;&lt;/script&gt;
+          </pre>
+          </pre>
+          <pre>
+                    &lt;div class="row pt-4 owl-carousel owl-theme"&gt;   &lt;---For this to work add the class name to the div you want to perform the slide to. ---&gt;
+                        &lt;div class="slide"&gt;                   
+                          &lt;i class="fa fa-tablet"&gt;&lt;/i&gt;
+                          &lt;h4&gt;App Developement&lt;/h4&gt;
+                          &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ad provident at beatae. Quas, earum.&lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class="slide"&gt;
+                          &lt;i class="fa fa-google-wallet"&gt;&lt;/i&gt;
+                          &lt;h4&gt;Web Developement&lt;/h4&gt;
+                          &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ad provident at beatae. Quas, earum.&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                </pre>
+          <li>This is the javascript code</li>
+          <pre>
+                    // Owl Carousel Slide
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
+    items: 4,
+    margin: 10,
+    nav: false, // This will an arrow tag in the slider
+    loop: true, // This will help with the repeating of the slider
+    autoplay: true, 
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: { // This is used for the reponsive
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 2,  // This determine the number of items that used slide if the screen size is reduce
+        nav: false
+      },
+      1000: {
+        items: 3,   // This tell the number of slides which should slide if its in full screen mode
+        nav: false,
+        loop: true
+      }
+    }
+  });
+});
+                </pre>
+          <li>The nest plugin is the counter. This allows the number effects</li>
+          <p>And This is the html code</p>
+          <pre>
+                  &lt;div class="col-xs-6"&gt;
+                    &lt;i class="fa fa-clock-o"&gt;&lt;/i&gt;
+                    &lt;h3 class="counter"&gt;&lt;/h3&gt;
+                    Hours Worked
+                  &lt;/div&gt;
+                  &lt;div class="col-xs-6"&gt;
+                    &lt;i class="fa fa-code"&gt;&lt;/i&gt;
+                    &lt;h3 class="counter1"&gt;&lt;/h3&gt;
+                    Lines of Code
+                  &lt;/div&gt;
+                  <p>The class is access by the js code</p>
+                </pre>
+          <p>And this is the jQuery Code</p>
+          <pre>
+                  // Counter.js file
+                  $(document).ready(function() {
+                    $(".counter1").jQuerySimpleCounter({
+                      // start number
+                      start: 0,
+                  
+                      // end number
+                      end: 3500,
+                  
+                      // easing effect
+                      easing: "swing",
+                  
+                      // duration time in ms
+                      duration: 10000
+                    });
+                  });
+                  //I hope this one is self explanatory
+                </pre>
+          <p>thern lets go to the cotumization of the page</p>
+        </ol>
+      </div>
+    </section>
+
+    <section id="Home">
+      <div class="container">
+        <h1 class="header">Home Page Customization</h1>
+        <p>Once You have got the theme, please open the index.html by double clicking or open in your favorite web
+          browser. </p>
+        <p>You should have a site like image below: </p>
+        <img src="screen shot/home-non-particle.png" alt="" class="img-fluid" id="img1">
+        <p>and this if you open the particle home page</p>
+        <img src="screen shot/home-particle.png" class="img-fluid" alt="">
+        <p>If you want to change the Logo:</p>
+
+        <p>Go to Line number 35-37. The code should be is as follows:</p>
+        <pre>
+            &lt;a class="navbar-brand" href="#"&gt;
+            Chris Nector
+          &lt;/a&gt;
+          </pre>
+          <p>You can also change the menu item starting  line number should be : 45</p>
+          <p>Please do the same for all other section if ​you need to change anything.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h1 class="header">About Page Customization</h1>
+        <p>Once You have got the theme, please scroll down</p>
+        <p>You should have a site like  image below: </p>
+        <img src="screen shot/about.png" alt="" class="img-fluid" id="img1">
+        <p>You can also change text of the page  starting on line: 89-119</p>
+          <p>Please do the same for all other section if ​you need to change anything.</p>
+      </div>
+    </section>
+
+    <section id="service">
+      <div class="container">
+        <h1>Service Page Customization</h1>
+        <p>Once You have got the theme, please scroll down</p>
+        <p>You should have a site like  image below: </p>
+        <img src="screen shot/services.png" alt="" class="img-fluid" id="img1">
+        <p>You can also change text of the page  starting on line: 123-196</p>
+          <p>Please do the same for all other section if ​you need to change anything.</p>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="container">
+        <h1>Portfolio Page Section</h1>
+        <p>Once You have got the theme, please scroll down</p>
+        <p>You should have a site like  image below: </p>
+        <img src="screen shot/portfolio.png" alt="" class="img-fluid" id="img1">
+        <p>You can also change text of the page  starting on line: 201-277</p>
+          <p>Please do the same for all other section if ​you need to change anything.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h1>Contact Page Section</h1>
+        <p>Once You have got the theme, please scroll down</p>
+        <p>You should have a site like  image below: </p>
+        <img src="screen shot/contact 1.png" alt="" class="img-fluid" id="img1">
+        <img src="screen shot/contact 2.png" alt="" class="img-fluid" id="img1">
+        <p>You can also change text of the page  starting on line: 201-277</p>
+          <p>Please do the same for all other section if ​you need to change anything.</p>
+      </div>
+    </section>
+
+    <section id="thanks">
+      <div class="container">
+        <h1 class="text-center">Thanks you for purchasing my template </h1>
+        <h2>And continue to check for out for me because I will be droping more unstading template.Thank you!!!!</h2>
+      </div>
+    </section>
+  </div>
+
+  <!-- jQuery.js file-->
+  <script src="js/jQuery.js"></script>
+  <!-- popper.js file-->
+  <script src="js/popper.js"></script>
+  <!-- bootstrap.min.js file-->
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
