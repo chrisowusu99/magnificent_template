@@ -8,6 +8,26 @@ Design and Developed by: OwusuTheme
 NB: This file contains the styling for the actual theme, this is the file you need to edit to change the look of the theme.
 
 =================================================== */
+
+/*Table of Content
+
+
+    1. Default css
+    2. Preloader css
+    3. Mouse Animation css
+    4. Nav Area css
+    5. Banner Area css
+    6. About Area css
+    7. Services Area css
+    8. Number Area css
+    9. Portfolio Area css
+    10. Testimonial Area css
+    11. Contact Area css
+    12. Brand Area css
+    13. Footer Area css
+
+
+*/
 * {
   box-sizing: border-box;
 }
@@ -20,7 +40,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/*-------------- 2. Preloader css starts ---------------*/
+/*-------------- 1. Preloader css starts ---------------*/
 
 .loader_bg {
   position: fixed;
@@ -71,12 +91,13 @@ body {
     opacity: 0;
   }
 }
-/*-- Start Navigation ---*/
+/*--2. Start Navigation ---*/
 nav.navbar .navbar-brand {
-  color: #fff;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: 900;
+  font-weight: 800;
+  font-size: 36px;
+  color: #f1f1f1;
+  font-family: sans-serif;
 }
 button i {
   color: #fff;
@@ -138,7 +159,7 @@ button i {
   top: 85%;
   transform: translate(-50%, -85%);
 }
-/*---- Home ----*/
+/*----3. Home----*/
 section#home {
   background: url("../img/road.jpg") -200px;
   background-size: cover;
@@ -151,54 +172,177 @@ section#home {
   height: 100%;
   width: 100%;
 }
-section#home .animate h1 {
-  color: #fff;
-  font-size: 35px;
-  line-break: strict;
-  font-family: "Abel", sans-serif;
-  font-weight: 900;
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -40%);
+.banner-area {
+  background-image: url(../img/road.jpg); /*--edit image--*/
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100%;
 }
-section#home .animate .animate-typing {
+
+.banner-area::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  content: "";
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.banner-table {
+  display: table;
+  margin: 0;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.banner-table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.welcome-text .intro h2 {
   color: #fff;
-  font-size: 40px;
-  font-family: "Seymour One", sans-serif;
-  letter-spacing: 4px;
+  font-size: 85px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.intro h1 {
+  color: #0076ff;
+  font-size: 60px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.ah-headline.clip .ah-words-wrapper::after {
+  background-color: #fff;
+}
+
+.banner-btn {
+  /* background: #0076ff; */
+  text-decoration: none;
+  font-weight: bold !important;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-top: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  border-color: #ddd;
+  border-width: medium;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+}
+.banner-btn:hover,
+.banner-btn:focus {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.welcome-text h3 {
   font-weight: 600;
+  color: #fff;
   text-transform: uppercase;
-  position: absolute;
-  left: 45%;
-  top: 50%;
-  transform: translate(-45%, -50%);
 }
-section#home .btn a {
+/*--- 4. Mouse animation starts---*/
+
+@-webkit-keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+@keyframes scroll-ani {
+  0% {
+    opacity: 1;
+    top: 29%;
+  }
+  15% {
+    opacity: 1;
+    top: 50%;
+  }
+  50% {
+    opacity: 0;
+    top: 50%;
+  }
+  100% {
+    opacity: 0;
+    top: 29%;
+  }
+}
+
+.mouse-scroll {
   position: absolute;
   left: 48%;
-  top: 60%;
-  transform: translate(-48%, -60%);
-  border-radius: 0;
+  display: inline-block;
+  line-height: 18px;
+  font-size: 13px;
+  font-weight: normal;
+  color: #ffffff;
+  letter-spacing: 2px;
+  margin-top: 10%;
+  text-decoration: none;
+  overflow: hidden;
 }
-section#home .circle {
-  background: transparent;
-  border: 2px solid #fff;
-  border-radius: 30px;
-  width: 100px;
-  height: 50px;
+.mouse-scroll .mouse {
+  position: relative;
+  display: block;
+  width: 35px;
+  height: 60px;
+  margin: 0 auto 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 3px solid #0076ff;
+  border-radius: 23px;
+}
+.mouse-scroll .mouse .mouse-movement {
   position: absolute;
-  left: 44%;
-  top: 80%;
-  transform: translate(-44%, -80%);
-  transform: rotate(90deg);
-  margin: auto;
+  display: block;
+  top: 29%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  background: #0076ff;
+  border-radius: 50%;
+  -webkit-animation: scroll-ani 2s linear infinite;
+  animation: scroll-ani 2s linear infinite;
 }
-/*--- About Section ---*/
-section#about .row h3 {
+/*---mouse animation ends---*/
+/*---Home End----*/
+
+/*--- 5. About Section ---*/
+section#about .row h2 {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 36px;
   color: #212121;
   font-family: sans-serif;
@@ -248,7 +392,7 @@ section#about .mt-4 h6 {
 }
 /*--- End About Section ---*/
 
-/*--- Start Service Section ----*/
+/*--- 6. Start Service Section ----*/
 section#services {
   background-image: url("../img/bannar_15.jpg");
   background-position: center;
@@ -293,7 +437,7 @@ section#services h2::after {
 
 /*---- End About Section ---*/
 
-/*---- Start Services Section ---*/
+/*---- 7. Start Services Section ---*/
 section#services .row {
   text-align: center;
 }
@@ -320,7 +464,8 @@ section#services .slide:hover h4 {
   -webkit-transform: rotate(360deg);
   transform: rotate(360deg);
 }
-/*--- Start Counter Section---*/
+
+/*--- 8. Start Counter Section---*/
 section#counter {
   background-color: #0077ffea;
   color: #fff;
@@ -338,14 +483,14 @@ section#counter .row i {
 }
 /*---- End Serivices Section ---*/
 
-/*----Start Portfolio Section ---*/
-#portfolio .mt-4 h2 {
+/*----9. Start Portfolio Section ---*/
+#portfolio h2 {
   text-align: center;
 }
 .por-text-details .col-xs-4 p {
   font-weight: bold;
   text-transform: uppercase;
-  color: #0076ff;
+  color: #007bff;
 }
 
 .mfp-zoom-out .mfp-with-anim {
@@ -386,7 +531,7 @@ section#counter .row i {
   margin: 0;
   font-size: 22px;
   margin-bottom: 15px;
-  border-bottom: 3px solid #0076ff;
+  border-bottom: 3px solid #007bff;
   padding-bottom: 10px;
 }
 
@@ -412,7 +557,7 @@ section#counter .row i {
   position: relative;
   text-align: center;
   cursor: pointer;
-  background: #0077ffe1;
+  background: #007bffe1;
 }
 
 .hovereffect .overlay {
@@ -442,7 +587,7 @@ section#counter .row i {
 
 .hovereffect h2 {
   text-transform: uppercase;
-  color: #0076ff;
+  color: #007bff;
   position: relative;
   font-size: 17px;
   background-color: transparent;
@@ -509,7 +654,7 @@ section#counter .row i {
   padding: 0;
 }
 
-/*--- Testimonial Section ---*/
+/*--- 10. Testimonial Section ---*/
 section#testimonial {
   background: url(../img/testimonial/banner_1.jpg);
 }
@@ -601,7 +746,7 @@ section#testimonial .testimonials h5 {
 }
 /*--- End Testimonial Section ---*/
 
-/*--- Start Contact Section ---*/
+/*--- 11. Start Contact Section ---*/
 section#contact h2 {
   position: relative;
   text-align: center;
@@ -662,11 +807,22 @@ section#contact form textarea {
   border: 2px solid #0076ff;
 }
 
-/*--- contact img ---*/
-#contact-img .shadow-lg {
-  border: 1px solid #444;
+/*--------12. Brand area starts-----------*/
+
+.logo-img {
+  border: 1px solid #ddd;
+  transition: all 300ms ease-in-out;
+  padding: 10px;
 }
-/*--- End Contact img ---*/
+
+.logo-img:hover {
+  border-color: transparent;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/*--------Brand area ends-----------*/
+
+/*--- 13. start footer section---*/
 footer {
   background: #444;
   text-align: center;
